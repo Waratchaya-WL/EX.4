@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 void main() {
   var app = MaterialApp(
     title: "my App",
-    home: Text("Hello Dart"),
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text("Hello Flutter ค่ะ"),
+      ),
+      body: Text("สวัสดีค่ะทุกคน"),
+    ),
   );
   runApp(app);
 }
