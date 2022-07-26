@@ -10,9 +10,23 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "My App",
-      home: Scaffold(
+      home: MyHomePage(),
+      theme: ThemeData(primaryColor: Colors.brown),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
         appBar: AppBar(
-          title: Text("Hello flutter ค่ะ"),
+          title: Text("โปรแกรมรันเลข"),
         ),
         body: Center(
           child: Column(
@@ -24,8 +38,6 @@ class MyApp extends StatelessWidget {
             ],
           ),
         ),
-      ),
-      theme: ThemeData(primaryColor: Colors.black),
-    );
+      );
   }
 }
