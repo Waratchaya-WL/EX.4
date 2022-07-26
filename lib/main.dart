@@ -4,21 +4,24 @@ void main() {
   runApp(MyApp());
 }
 
-
 // สร้าง widget
 class MyApp extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-    title: "my App",
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text("Hello Flutter ค่ะ"),
+    return MaterialApp(
+      title: "My App",
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Hello flutter ค่ะ"),
+        ),
+        body: Center(
+          child: Text(
+            "สวัสดีค่ะทุกคน",
+            style: TextStyle(fontSize: 30, color: Colors.brown),
+          ),
+        ),
       ),
-      body: Text("สวัสดีค่ะทุกคน"),
-    ),
-    theme: ThemeData(primarySwatch: Colors.brown),
-  );   
+      theme: ThemeData(primaryColor: Colors.black),
+    );
   }
 }
