@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  var app = MaterialApp(
+  runApp(MyApp());
+}
+
+
+// สร้าง widget
+class MyApp extends StatelessWidget {
+  
+  @override
+  Widget build(BuildContext context) {
+    return  MaterialApp(
     title: "my App",
     home: Scaffold(
       appBar: AppBar(
@@ -10,6 +19,6 @@ void main() {
       body: Text("สวัสดีค่ะทุกคน"),
     ),
     theme: ThemeData(primarySwatch: Colors.brown),
-  );
-  runApp(app);
+  );   
+  }
 }
