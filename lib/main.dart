@@ -15,9 +15,13 @@ class MyApp extends StatelessWidget {
           title: Text("Hello flutter ค่ะ"),
         ),
         body: Center(
-          child: Text(
-            "สวัสดีค่ะทุกคน",
-            style: TextStyle(fontSize: 30, color: Colors.brown),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text("สวัสดีค่ะทุกคน"),
+              Text("Hello Dart"),
+              Text("Hello flutter")
+            ],
           ),
         ),
       ),
