@@ -24,8 +24,16 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int number = 0; // การสร้าง state
 
+  
+
   @override
   Widget build(BuildContext context) {
+
+    // กลุ่มข้อมูล Text Wiget
+    List<Widget> data = [];
+  for(var i = 0 ;i<10;i++){
+      data.add(Text("รายการที่ ${i+1}"));
+  }
     return Scaffold(
       appBar: AppBar(
         title: Text("โปรแกรมนับเลข"),
@@ -33,23 +41,20 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("กดปุ่มเพื่อเพิ่มจำนวนตัวเลข"),
-            Text(
-              number.toString(),
-              style: TextStyle(fontSize: 60),
-            ),
-          ],
+          children:data,
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            number++;
-          });
-        },
+        onPressed:addNumber ,
         child: Icon(Icons.add),
       ),
     );
+  }
+
+  void addNumber(){
+      setState(() {
+            number++;
+          });
+
   }
 }
